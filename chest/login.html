@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link rel="stylesheet" href="./assests/css/login.css">
+    <title>Login & Signup</title>
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <img src="./assests/images/x-ray (1).png" alt="">
+            <div class="title">Chest Diseases Prediction</div>
+        </div>
+        <nav class="nav-container">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <div class="box"></div>
+    <div class="container-forms">
+      <div class="container-info">
+        <div class="info-item">
+          <div class="table">
+            <div class="table-cell">
+              <p>
+                Have an account?
+              </p>
+              <div class="btn">
+                Log in
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="table">
+            <div class="table-cell">
+              <p>
+                Don't have an account? 
+              </p>
+              <div class="btn">
+                Sign up
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-form">
+        <form class="form-item log-in" action="login.php" method="post">
+          <div class="table">
+            <div class="table-cell">
+              <input name="Username" placeholder="Username" type="text" />
+              <input name="Password" placeholder="Password" type="Password" />
+              <input class="btn"  type="submit">
+            </div>
+          </div>
+        </form>
+        <form class="form-item sign-up" action="register.php" method="post">
+          <div class="table">
+            <div class="table-cell">
+              <input name="email" placeholder="Email" type="text" />
+              <input name="fullName" placeholder="Full Name" type="text" />
+              <input name="Password" placeholder="Password" type="Password" />
+              <select style="margin-left: 42px;padding:8px ;width: 221px;" name="userType" class="userType">
+                <option value="1">Doctor</option>
+                <option value="2">Patient</option>
+              </select>
+              <input class="btn" type="submit">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p class="copyrights"> &copy; Copyright 2024 chestDisease.com All rights reserved....</p>
+</footer>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script>$(".info-item .btn").click(function(){
+        $(".container").toggleClass("log-in");
+      });
+      $(".container-form .btn").click(function(){
+        $(".container").addClass("active");
+      });</script>
+</body>
+</html>
